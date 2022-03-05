@@ -12,8 +12,23 @@ function validateForm() {
     let isPwdValid = validatePassword();
     let isCheckPwdValid = checkPasswords(password, confirmPassword);
     let isFormValidated = isUNValid && isEmailValid && isPwdValid && isCheckPwdValid;
+
+
     if (isFormValidated) {
+
         alert('Form Submitted Successfully!');
+        var formValues = {
+            "name": username.value,
+            "email": email.value,
+            "password": password.value,
+            "confirmPwd": confirmPassword.value
+        }
+        //console.log(formValues);
+        localStorage.setItem('user', JSON.stringify(formValues));
+        var val = localStorage.getItem('user');
+        console.log(JSON.parse(val));
+
+        form.reset();
     }
     else {
         alert('Please fill in all the fields correctly');
