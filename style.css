@@ -1,0 +1,45 @@
+body {
+    background:  azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.form-container {
+    max-width: 500px;
+    width: 100%;
+    border: 2px solid #d30c5f;
+    padding: 2rem;
+    box-shadow: 5px 5px 10px #ffffff8d;
+}
+
+form {
+    padding: .5rem;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.form-field input {
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+input[type="submit"] {
+margin-top: 10px;
+}
+
+.success input {
+    border-color: green;
+}
+.error small {
+    color: red;
+}
+.error input {
+    border-color: red;
+}
